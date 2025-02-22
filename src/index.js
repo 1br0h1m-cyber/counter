@@ -1,21 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/navbar';
-import { BrowserRouter } from 'react-router-dom';
 
-import CountNum from './components/counter';
-import Typer from './components/typer';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Navbar />
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
 );

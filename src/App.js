@@ -1,22 +1,16 @@
-import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/home/home';
-import About from './pages/about/about';
-import Service from './pages/service/service';
-import Contact from './pages/contact/contact';
 
-export default function App() {
+import React, { useState } from "react";
+
+function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <div>
-      <div style={{ padding: '20px', backgroundColor: 'rgba(255,255,255, 0.2)'}}>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<h1>404 - Page not Found</h1>} />
-        </Routes>
-      </div>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Counter: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>➕ Increment</button>
+      <button onClick={() => setCount(count - 1)}>➖ Decrement</button>
     </div>
   );
 }
+export default App;
+
